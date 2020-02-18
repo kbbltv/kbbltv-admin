@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { AuthGuard } from '../shared/guards/auth/auth.guard';
+import { LibraryPageComponent } from './library-page/library-page.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, canActivate: [AuthGuard] }
+  { path: '', pathMatch: 'full', redirectTo: 'library', canActivate: [AuthGuard] },
+  { path: 'library', component: LibraryPageComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

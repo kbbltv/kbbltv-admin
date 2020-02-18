@@ -12,7 +12,6 @@ import { LoginGuard } from './shared/guards/login/login.guard';
 import { AuthInterceptorService } from './shared/services/auth-interceptor/auth-interceptor.service';
 import { MatButtonModule } from '@angular/material/button'; 
 import { MatInputModule } from '@angular/material/input';
-import { TimelineComponent } from './admin/timeline/timeline.component';
 
 @NgModule({
   declarations: [
