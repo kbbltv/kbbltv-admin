@@ -1,0 +1,10 @@
+<div class="content">
+      <h2 class="form-signin-heading">Please sign in</h2>
+      <mat-form-field>
+        <input type="text" matInput [(ngModel)]="username" placeholder="Username" required autofocus>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="password" matInput [(ngModel)]="password" placeholder="Password">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="submit()">Sign in</button>
+  </div>

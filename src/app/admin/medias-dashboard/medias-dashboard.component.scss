@@ -1,0 +1,41 @@
+.medias-dashboard {
+    padding: 25px;
+    
+    .youtube-data {
+        img {
+            width: 100%;
+        }
+        
+        h4 {
+            margin: 5px 0;
+        }
+    }
+    
+    .media-list {
+        max-height: 600px;
+        overflow-y: scroll;
+
+        small {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        
+        h6 {
+            margin: 5px 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: calc(100% - 15px);
+        }
+        
+        img {
+            width: calc(100% - 15px);
+        }
+        
+        .col-6 {
+            flex-basis: unset;
+            flex-grow: unset;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<h1>Timeline</h1>
+<div class="col-4">
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" [min]="today" (dateChange)="loadVideoTimeline()" placeholder="Choose a date" [(ngModel)]="timelineDate" [ngModelOptions]="{ standalone: true }">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+</div>                          
+
+<div class="video-timeline">
+    <h2>Video Timeline</h2>
+    <div class="timeline-drop" cdkDropList
+        #videoTimelineList="cdkDropList"
+        [cdkDropListData]="videoTimeline"
+        (cdkDropListDropped)="dropVideo($event)"
+        cdkDropListConnectedTo="list-1"
+        id="list-2">
+        <div class="media" *ngFor="let timelineEntry of videoTimeline"
+            [ngStyle]="{ 'width.px': timelineEntry.media.duration / 60 }"
+            matTooltip="{{ timelineEntry.media.name }} will play from {{ timelineEntry.startAt | date: 'HH:mm' }} until {{ timelineEntry.endAt | date: 'HH:mm' }}">
+            {{ timelineEntry.startAt | date: 'HH:mm' }}
+            <div style="float: right"> {{ timelineEntry.endAt | date: 'HH:mm' }}</div>
+            <div class="media-content">
+                <p>{{ timelineEntry.media.name }}</p>
+                <img [src]="timelineEntry.media.thumbnail_url">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="audio-timeline">
+    <h2>Audio Timeline</h2>
+    <div class="timeline-drop">
+        <div class="media" matTooltip="Info about the media">
+            00:00
+            <div class="media-content">
+                <p>ADULT SWIM SMALLS: VOLUME ONE</p>
+                <img src="https://i.ytimg.com/vi/kheAwz3DY8s/hqdefault.jpg">
+            </div>
+        </div>
+    </div>
+</div>

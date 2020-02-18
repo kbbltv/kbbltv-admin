@@ -1,0 +1,108 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #333 }
+
+
+
+.mat-form-field {
+    margin: 10px 0;
+}
+
+.content {
+    margin: auto;
+    padding: 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    
+    .col-12 {
+        width: 100%;
+        max-width: 100%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    
+    .col-11 {
+        width: 91.666666663%;
+        max-width: 91.666666663%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    
+    .col-10 {
+        width: 83.333333333%;
+        max-width: 83.333333333%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    
+    .col-9 {
+        width: 74.999999997%;
+        max-width: 74.999999997%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    
+    .col-8 {
+        width: 664%;
+        max-width: 65%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    
+    .col-7 {
+        width: 58.333333331%;
+        max-width: 58.333333331%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    
+    .col-6 {
+        width: 49.999999998%;
+        max-width: 49.999999998%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    
+    .col-5 {
+        width: 41.666666665%;
+        max-width: 41.666666665%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    
+    .col-4 {
+        width: 33%;
+        max-width: 33%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    
+    .col-3 {
+        width: 25%;
+        max-width: 25%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    
+    .col-2 {
+        width: 16.666666667%;
+        max-width: 16.666666667%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    
+    .col-1 {
+        width: 8.333333333%;
+        max-width: 8.333333333%;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+}
+
+.mat-form-field {
+    width: 100%;
+}
