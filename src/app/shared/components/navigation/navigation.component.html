@@ -1,1 +1,5 @@
-<p>navigation works!</p>
+<ul>
+    <li>kbbl.tv.software</li>
+    <li [ngClass]="{ 'active': activatedRoute === '/admin/library' }"><a routerLink="/admin/library">library</a></li>
+    <li [ngClass]="{ 'active': activatedRoute === '/admin/timeline' }"><a routerLink="/admin/timeline">prog.timeline</a></li>
+</ul>

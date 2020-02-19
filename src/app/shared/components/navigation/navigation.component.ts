@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor() { }
+  activatedRoute: string;
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+    this.router.events.subscribe(event => {
+      if(event instanceof NavigationStart) {
+        this.checkActivatedRoute();
+      }
+    });
+
+    this.checkActivatedRoute();
+  }
+
+  private checkActivatedRoute() {
+    this.activatedRoute = this.router.url;
   }
 
 }
