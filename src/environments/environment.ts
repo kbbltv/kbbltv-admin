@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: "http://34.95.229.112/api",
+  apiUrl: "http://localhost:8080/api",
   noEmbededUrl: "https://noembed.com/embed?url="
 };
 
