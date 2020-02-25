@@ -1,1 +1,16 @@
 <h1>my library</h1>
+<!-- search -->
+<mat-form-field>
+    <mat-label>search:</mat-label>
+    <input matInput [(ngModel)]="search" (keyup)="searchMedia()">
+    <button mat-button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="search=''">
+        <mat-icon>close</mat-icon>
+    </button>
+</mat-form-field>
+<!-- tags -->
+<!-- list -->
+<ul class="media-list">
+    <li *ngFor="let media of mediaList" (click)="clickMedia(media)">
+        {{ media.name }}
+    </li>
+</ul>
